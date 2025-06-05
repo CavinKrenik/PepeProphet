@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\retrain_schedule.py", line 1, in <module>
+    import schedule
+ModuleNotFoundError: No module named 'schedule'
