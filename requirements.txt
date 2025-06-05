@@ -1,0 +1,5 @@
+praw
+requests
+vaderSentiment
+discord_webhook
+python-telegram-bot
