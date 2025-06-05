@@ -1,43 +1,62 @@
-import streamlit as st
 import os
 import pandas as pd
 from datetime import datetime
+import streamlit as st
 
 st.set_page_config(page_title="PepeProphet Terminal", layout="wide")
+st.markdown(f"<meta http-equiv='refresh' content='60'>", unsafe_allow_html=True)
 
-# 🔁 Auto-refresh every 60 seconds
-st_autorefresh = st.empty()
-st_autorefresh.markdown(
-    f"<meta http-equiv='refresh' content='60'>",
-    unsafe_allow_html=True
-)
+# Uptime Tracking
+if "start_time" not in st.session_state:
+    st.session_state["start_time"] = datetime.now()
+    st.session_state["cycles"] = 0
+st.session_state["cycles"] += 1
 
-st.title("🧠 PepeProphet AI Terminal")
+st.title("📈 PepeProphet AI Terminal")
+st.caption(f"🕒 Uptime: {datetime.now() - st.session_state['start_time']}, Cycles: {st.session_state['cycles']}")
 
-# 📈 Bot Status
-st.subheader("📈 Bot Status")
-log_file = "logs/pepeprophet_main.log"
-last_log_line = ""
-if os.path.exists(log_file):
-    with open(log_file, "r") as f:
-        lines = f.readlines()
-        if lines:
-            last_log_line = lines[-1]
+# Load Logs
+today_log = f"logs/signals_{datetime.now().strftime('%Y-%m-%d')}.csv"
+df = pd.read_csv(today_log) if os.path.exists(today_log) else pd.DataFrame()
 
-st.text(f"🕒 Last Log Entry:\n{last_log_line.strip() if last_log_line else 'No entries yet.'}")
+# Sidebar Filters
+st.sidebar.header("🔍 Filter Signals")
+coin_filter = st.sidebar.selectbox("Coin", ["All"] + sorted(df["coin"].unique()) if not df.empty else ["All"])
+action_filter = st.sidebar.selectbox("Action", ["All", "BUY 🚀", "SELL 🛑", "HOLD ⏸️"])
+if coin_filter != "All":
+    df = df[df["coin"] == coin_filter]
+if action_filter != "All":
+    df = df[df["action"] == action_filter]
 
-# 📊 Live CSV Viewer
-st.subheader("📊 Today's Signal Data")
-log_csv = f"logs/signals_{datetime.now().strftime('%Y-%m-%d')}.csv"
-if os.path.exists(log_csv):
-    df = pd.read_csv(log_csv)
-    st.dataframe(df.tail(20))
-    if 'price' in df.columns and 'volume' in df.columns:
-        st.line_chart(df[['price', 'volume']])
+# Signal Table
+st.subheader("📊 Signal Log")
+if not df.empty:
+    st.dataframe(df.sort_values("timestamp", ascending=False), use_container_width=True)
 else:
-    st.warning("No signal log for today yet.")
+    st.warning("No data available for today.")
 
-# 📜 Live Logs Viewer
+# CSV Download
+if not df.empty:
+    csv_export = df.to_csv(index=False).encode("utf-8")
+    st.download_button("📥 Download CSV", data=csv_export, file_name="pepeprophet_signals.csv", mime="text/csv")
+
+# Accuracy Chart
+model_log = "logs/accuracy_log.csv"
+if os.path.exists(model_log):
+    acc_df = pd.read_csv(model_log)
+    st.subheader("🎯 Accuracy Over Time")
+    st.line_chart(acc_df.set_index("timestamp")["accuracy"])
+
+# Sentiment Score
+sentiment_log = "logs/sentiment_score.txt"
+if os.path.exists(sentiment_log):
+    with open(sentiment_log) as f:
+        sentiment = f.read().strip()
+        st.subheader("🧠 Live Reddit Sentiment Score")
+        st.metric(label="Current Sentiment", value=sentiment)
+
+# Logs Viewer
+log_file = "logs/pepeprophet_main.log"
 st.subheader("📜 Live Logs")
 if os.path.exists(log_file):
     with open(log_file, "r") as f:
