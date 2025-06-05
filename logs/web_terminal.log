@@ -5,3 +5,212 @@ nohup: ignoring input
   Local URL: http://localhost:8501
   Network URL: http://10.0.0.168:8501
 
+2025-06-04 23:59:50.725 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:00:51.190 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:01:51.723 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:02:52.269 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:03:52.777 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:04:53.286 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:05:53.805 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:06:54.342 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:07:54.878 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:08:55.405 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:09:55.927 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:10:56.444 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:11:56.951 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:12:57.467 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:13:58.039 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:14:58.579 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:15:59.099 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:16:59.604 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>
+2025-06-05 00:18:00.145 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 645, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\Cavin\OneDrive\Desktop\PepeProphet\web_terminal.py", line 63, in <module>
+    logs = f.read()
+  File "C:\Users\Cavin\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2903: character maps to <undefined>

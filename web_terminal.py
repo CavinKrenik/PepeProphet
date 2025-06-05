@@ -56,11 +56,16 @@ if os.path.exists(sentiment_log):
         st.metric(label="Current Sentiment", value=sentiment)
 
 # Logs Viewer
-log_file = "logs/pepeprophet_main.log"
 st.subheader("📜 Live Logs")
+log_file = "logs/pepeprophet_main.log"
+
 if os.path.exists(log_file):
-    with open(log_file, "r") as f:
-        logs = f.read()
-    st.text_area("Log Output", logs, height=300)
+    try:
+        with open(log_file, "r", encoding="utf-8") as f:
+            logs = f.read()
+        st.text_area("Log Output", logs, height=300)
+    except UnicodeDecodeError:
+        st.warning("⚠️ Could not decode log file (non-UTF-8 characters).")
 else:
-    st.warning("Log file not found.")
+    st.warning("⚠️ Log file not found.")
+

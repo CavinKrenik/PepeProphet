@@ -1,18 +1,23 @@
 import pandas as pd
 import os
+import glob
 import joblib
-from datetime import datetime  # <-- Needed for backup timestamp
+from datetime import datetime
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-def train_from_csv(csv_path="logs/pepeprophet_signals.csv", model_path="model.pkl"):
-    if not os.path.exists(csv_path):
-        print(f"[Trainer] CSV log file not found: {csv_path}")
-        return
+def get_latest_signal_log():
+    log_files = glob.glob("logs/signals_2025-*.csv")
+    if not log_files:
+        raise FileNotFoundError("No log files found.")
+    return max(log_files, key=os.path.getctime)
+
+def train_from_csv(model_path="model.pkl"):
+    csv_path = get_latest_signal_log()
+    print(f"[Trainer] Using log file: {csv_path}")
 
     df = pd.read_csv(csv_path)
-
     if 'result' not in df.columns:
         print("[Trainer] 'result' column missing. Add WIN/LOSE tracking first.")
         return
@@ -35,14 +40,12 @@ def train_from_csv(csv_path="logs/pepeprophet_signals.csv", model_path="model.pk
     accuracy = accuracy_score(y_test, model.predict(X_test))
     print(f"[Trainer] Accuracy: {accuracy:.2f}")
 
-    joblib.dump(model, model_path)
-    print(f"[Trainer] Model saved to {model_path}")
-
-    # ✅ Versioned backup
     os.makedirs("model_backups", exist_ok=True)
     backup_name = f"model_backups/model_{datetime.now().strftime('%Y%m%d_%H%M')}.pkl"
     joblib.dump(model, backup_name)
     print(f"[Trainer] Backup saved to {backup_name}")
+    joblib.dump(model, model_path)
+    print(f"[Trainer] Latest model saved to {model_path}")
 
 if __name__ == "__main__":
     train_from_csv()
