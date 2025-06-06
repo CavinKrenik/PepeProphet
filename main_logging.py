@@ -73,7 +73,7 @@ def run_bot():
         dex_pairs = {
             "MIND (Mind of Pepe)": "0xa339d4c41ad791e27a10cd0f9a80deec815b79ee",
             "WEPE (Wall Street Pepe)": "0xa3c2076eb97d573cc8842f1db1ecdf7b6f77ba27",
-            "MOODENG": "22wrmytj8x2trvqen3fxxi2r4rn6jdhwomtpssmn8rud"
+            "MOODENG": "ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY"
         }
 
         for name, address in dex_pairs.items():

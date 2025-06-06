@@ -15,10 +15,9 @@ from pepeprophet.notifications.discord import send_discord_alert
 from predict_action_model import predict_action
 from logger_setup import setup_logger
 
-# ✅ Setup rotating logger
 logger = setup_logger("logs/pepeprophet_main.log")
 
-def log_to_csv(coin, price, volume, sentiment, score, action, future_price=None, result=None):
+def log_to_csv(coin, price, volume, sentiment, score, action, confidence, future_price=None, result=None):
     date_str = datetime.now().strftime('%Y-%m-%d')
     filepath = f"logs/signals_{date_str}.csv"
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -28,11 +27,11 @@ def log_to_csv(coin, price, volume, sentiment, score, action, future_price=None,
         writer = csv.writer(csvfile)
         if not file_exists:
             writer.writerow([
-                "timestamp", "coin", "price", "volume", "sentiment", "score", "action", "future_price", "result"
+                "timestamp", "coin", "price", "volume", "sentiment", "score", "action", "confidence", "future_price", "result"
             ])
         writer.writerow([
             datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            coin, price, volume, sentiment, round(score, 3), action,
+            coin, price, volume, sentiment, round(score, 3), action, confidence,
             future_price, result
         ])
 
@@ -41,7 +40,6 @@ def run_bot():
         logger.info("🚀 Starting new hybrid prediction cycle...")
         print("[PepeProphet] Starting new hybrid prediction cycle...\n")
 
-        # === CoinGecko Blue Chips ===
         coin_ids = ["bitcoin", "ethereum", "solana", "ripple"]
         market_data = fetch_market_data(coin_ids)
 
@@ -52,51 +50,53 @@ def run_bot():
             score = score_trend(data, sentiment_score)
 
             try:
-                action = predict_action(score, data["price"], data["volume"], sentiment_score)
+                action, confidence = predict_action(score, data["price"], data["volume"], sentiment_score)
             except Exception as e:
                 logger.warning(f"[Predictor] Error: {e} — using fallback logic")
-                action = "BUY 🚀" if score > 0.6 else "SELL 🛑" if score < 0.3 else "HOLD ⏸️"
+                action, confidence = ("BUY 🚀", 0) if score > 0.6 else ("SELL 🛑", 0) if score < 0.3 else ("HOLD ⏸️", 0)
 
             msg = (
                 f"📊 {coin.upper()} Report\n"
                 f"Score: {score:.3f}\n"
                 f"Price: ${data['price']:,}\n"
-                f"Action: {action}"
+                f"Volume: {data['volume']:,}\n"
+                f"Sentiment: {sentiment_score:.2f}\n"
+                f"Action: {action} ({confidence}% confidence)"
             )
 
-            logger.info(f"[Alert] {coin.upper()} Action: {action}")
+            logger.info(f"[Alert] {coin.upper()} Action: {action} ({confidence}%)")
             send_telegram_alert(msg)
             send_discord_alert(msg)
-            log_to_csv(coin.upper(), data["price"], data["volume"], sentiment_score, score, action)
+            log_to_csv(coin.upper(), data["price"], data["volume"], sentiment_score, score, action, confidence)
 
-        # === DexScreener Meme Coins ===
         dex_pairs = {
             "MIND (Mind of Pepe)": "0xa339d4c41ad791e27a10cd0f9a80deec815b79ee",
             "WEPE (Wall Street Pepe)": "0xa3c2076eb97d573cc8842f1db1ecdf7b6f77ba27",
-            "MOODENG": "22wrmytj8x2trvqen3fxxi2r4rn6jdhwomtpssmn8rud"
+            "MOODENG": "ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY"
         }
 
         for name, address in dex_pairs.items():
             logger.info(f"[DexScreener] Fetching {name}...")
             try:
                 data = fetch_dex_pair(address)
-                sentiment_score = 0  # Static placeholder
+                sentiment_score = 0
                 score = score_trend(data, sentiment_score)
-                action = predict_action(score, data["price"], data["volume"], sentiment_score)
+                action, confidence = predict_action(score, data["price"], data["volume"], sentiment_score)
 
                 msg = (
                     f"📊 {name}\n"
                     f"Price: ${data['price']:.6f}\n"
                     f"Volume: {data['volume']:,.0f}\n"
                     f"Score: {score:.3f}\n"
-                    f"Action: {action}\n"
+                    f"Sentiment: {sentiment_score:.2f}\n"
+                    f"Action: {action} ({confidence}% confidence)\n"
                     f"🔗 [View on DexScreener]({data['url']})"
                 )
 
-                logger.info(f"[Alert] {name} Action: {action}")
+                logger.info(f"[Alert] {name} Action: {action} ({confidence}%)")
                 send_telegram_alert(msg)
                 send_discord_alert(msg)
-                log_to_csv(name, data["price"], data["volume"], sentiment_score, score, action)
+                log_to_csv(name, data["price"], data["volume"], sentiment_score, score, action, confidence)
             except Exception as e:
                 logger.error(f"[DexScreener Error] {name}: {e}")
 

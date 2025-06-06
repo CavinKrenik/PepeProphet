@@ -1,1 +1,7 @@
 nohup: ignoring input
+[Labeler] Using latest log: logs\signals_2025-06-05.csv
+[Labeler] Labeling complete and saved.
+[Trainer] Using log file: logs\signals_2025-06-05.csv
+[Trainer] Accuracy: 0.79
+[Trainer] Backup saved to model_backups/model_20250605_1200.pkl
+[Trainer] Latest model saved to model.pkl
