@@ -1,15 +1,23 @@
 import joblib
-import numpy as np
+import pandas as pd
 
-def predict_action(score, price, volume, sentiment, model_path="model.pkl"):
-    try:
-        model = joblib.load(model_path)
-        X = np.array([[score, price, volume, sentiment]])
-        prediction = model.predict(X)[0]
-        confidence = round(100 * model.predict_proba(X).max(), 2)
+# Load model once
+model = joblib.load("model.pkl")
 
-        action_label = "BUY 🚀" if prediction == 1 else "SELL 🛑"
-        return action_label, confidence
-    except Exception as e:
-        print(f"[Predictor] Error loading or using model: {e}")
-        return "HOLD ⏸️", 0
+def predict_action(score, price, volume, sentiment):
+    features = pd.DataFrame([{
+        "score": score,
+        "price": price,
+        "volume": volume,
+        "sentiment": sentiment
+    }])
+
+    confidence = round(model.predict_proba(features)[0][1] * 100, 2)
+    prediction = model.predict(features)[0]
+
+    if prediction == 1:
+        action = "BUY 🚀" if confidence > 60 else "HOLD ⏸️"
+    else:
+        action = "SELL 🛑" if confidence > 60 else "HOLD ⏸️"
+
+    return action, confidence
