@@ -14,6 +14,7 @@ from pepeprophet.notifications.telegram import send_telegram_alert
 from pepeprophet.notifications.discord import send_discord_alert
 from predict_action_model import predict_action
 from logger_setup import setup_logger
+from database_sync import insert_signal
 
 logger = setup_logger("logs/pepeprophet_main.log")
 
@@ -34,6 +35,12 @@ def log_to_csv(coin, price, volume, sentiment, score, action, confidence, future
             coin, price, volume, sentiment, round(score, 3), action, confidence,
             future_price, result
         ])
+
+    insert_signal([
+        datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        coin, price, volume, sentiment, score, action, confidence,
+        future_price, result
+    ])
 
 def run_bot():
     while True:

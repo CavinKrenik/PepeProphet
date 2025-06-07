@@ -3,21 +3,48 @@ import pandas as pd
 from datetime import datetime
 import streamlit as st
 from PIL import Image
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title="PepeProphet Terminal", layout="wide")
 
-# Load image and display title
+# Load logo and show title
 image = Image.open("prof.png")
 st.image(image, width=50)
 st.markdown("## PepeProphet AI Terminal")
 
-# Uptime
+# Uptime tracker
 if "start_time" not in st.session_state:
     st.session_state["start_time"] = datetime.now()
     st.session_state["cycles"] = 0
 st.session_state["cycles"] += 1
-
 st.caption(f"🕒 Uptime: {datetime.now() - st.session_state['start_time']}, Cycles: {st.session_state['cycles']}")
+
+# === TradingView Chart at Top ===
+st.subheader("📉 Market Overview")
+components.html(
+    """
+    <div class="tradingview-widget-container" style="height:700px;">
+      <div class="tradingview-widget-container__widget" style="height:700px;"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+      {
+        "autosize": true,
+        "symbol": "BINANCE:BTCUSDT",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "allow_symbol_change": true,
+        "height": "700",
+        "width": "100%",
+        "support_host": "https://www.tradingview.com"
+      }
+      </script>
+    </div>
+    """,
+    height=750,
+    scrolling=False
+)
 
 # === Sidebar Filters ===
 st.sidebar.header("🔍 Filter Signals")
@@ -37,7 +64,7 @@ if not df.empty:
     if action_filter != "All":
         df = df[df["action"] == action_filter]
 
-# === Signal Table ===
+# === Signal Log Table ===
 st.subheader("📊 Signal Log")
 if not df.empty:
     df_sorted = df.sort_values("timestamp", ascending=False)
@@ -53,14 +80,14 @@ if not df.empty:
         color = "🟩 High" if confidence > 75 else "🟨 Medium" if confidence > 50 else "🟧 Low" if confidence > 25 else "🟥 Very Low"
         st.text(f"{row['timestamp']} | {row['coin']} | {row['action']} | Confidence: {confidence:.2f}% {color}")
 
-# === Accuracy Tracking ===
+# === Accuracy Chart ===
 acc_log = "logs/accuracy_log.csv"
 if os.path.exists(acc_log):
     acc_df = pd.read_csv(acc_log)
     st.subheader("🎯 Accuracy Over Time")
     st.line_chart(acc_df.set_index("timestamp")["accuracy"])
 
-# === Sentiment Score ===
+# === Reddit Sentiment Score ===
 sentiment_log = "logs/sentiment_score.txt"
 if os.path.exists(sentiment_log):
     with open(sentiment_log) as f:
@@ -68,7 +95,7 @@ if os.path.exists(sentiment_log):
     st.subheader("🧠 Live Reddit Sentiment Score")
     st.metric(label="Current Sentiment", value=sentiment)
 
-# === CSV Export ===
+# === Export to CSV ===
 if not df.empty:
     csv_export = df.to_csv(index=False).encode("utf-8")
     st.download_button("📥 Download CSV", data=csv_export, file_name="pepeprophet_signals.csv", mime="text/csv")
@@ -86,16 +113,8 @@ if os.path.exists(log_file):
 else:
     st.warning("⚠️ Log file not found.")
 
-# === Retrain Button ===
+# === Manual Retrain ===
 st.subheader("🧠 Manual Retrain")
 if st.button("🔁 Trigger Model Retrain"):
     os.system("python retrain_schedule.py")
     st.success("Retraining triggered!")
-
-# === Top Trending Coin Placeholder ===
-st.subheader("📊 Top Trending Coins (Coming Soon)")
-st.info("We'll visualize most active coins based on volume/sentiment soon.")
-
-# === TradingView Widget Instruction (for integration with React frontend) ===
-st.subheader("💹 External Chart Integration")
-st.markdown("To embed a TradingView widget, use the provided `TradingViewWidget.jsx` React component in your frontend.")

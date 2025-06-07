@@ -1774,3 +1774,122 @@
 2025-06-07 00:09:37,495 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
 2025-06-07 00:09:37,497 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
 
+2025-06-07 00:30:04,722 [INFO] 🚀 Starting new hybrid prediction cycle...
+2025-06-07 00:30:05,087 [INFO] [Market] BITCOIN - Price: $105088, Volume: 26476318183
+2025-06-07 00:30:06,144 [INFO] [Alert] BITCOIN Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:30:07,358 [INFO] [Market] ETHEREUM - Price: $2494.0, Volume: 15074888963
+2025-06-07 00:30:07,858 [INFO] [Alert] ETHEREUM Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:30:08,760 [INFO] [Market] RIPPLE - Price: $2.19, Volume: 1581869330
+2025-06-07 00:30:09,234 [INFO] [Alert] RIPPLE Action: BUY 🚀 (98.85%)
+2025-06-07 00:30:10,173 [INFO] [Market] SOLANA - Price: $152.2, Volume: 2868965664
+2025-06-07 00:30:10,648 [INFO] [Alert] SOLANA Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:30:11,580 [INFO] [DexScreener] Fetching MIND (Mind of Pepe)...
+2025-06-07 00:30:11,780 [INFO] [Alert] MIND (Mind of Pepe) Action: HOLD ⏸️ (50.04%)
+2025-06-07 00:30:12,737 [INFO] [DexScreener] Fetching WEPE (Wall Street Pepe)...
+2025-06-07 00:30:12,939 [INFO] [Alert] WEPE (Wall Street Pepe) Action: HOLD ⏸️ (50.01%)
+2025-06-07 00:30:13,897 [INFO] [DexScreener] Fetching MOODENG...
+2025-06-07 00:30:14,083 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
+2025-06-07 00:30:14,084 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
+
+2025-06-07 00:31:51,064 [INFO] 🚀 Starting new hybrid prediction cycle...
+2025-06-07 00:31:51,815 [INFO] [Market] BITCOIN - Price: $105049, Volume: 26463901345
+2025-06-07 00:31:52,802 [INFO] [Alert] BITCOIN Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:31:54,286 [INFO] [Market] ETHEREUM - Price: $2493.9, Volume: 15044003964
+2025-06-07 00:31:54,826 [INFO] [Alert] ETHEREUM Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:31:55,664 [INFO] [Market] RIPPLE - Price: $2.19, Volume: 1581761261
+2025-06-07 00:31:56,141 [INFO] [Alert] RIPPLE Action: BUY 🚀 (98.85%)
+2025-06-07 00:31:57,180 [INFO] [Market] SOLANA - Price: $152.22, Volume: 2870254748
+2025-06-07 00:31:57,682 [INFO] [Alert] SOLANA Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:31:58,656 [INFO] [DexScreener] Fetching MIND (Mind of Pepe)...
+2025-06-07 00:31:58,858 [INFO] [Alert] MIND (Mind of Pepe) Action: HOLD ⏸️ (50.04%)
+2025-06-07 00:31:59,769 [INFO] [DexScreener] Fetching WEPE (Wall Street Pepe)...
+2025-06-07 00:31:59,972 [INFO] [Alert] WEPE (Wall Street Pepe) Action: HOLD ⏸️ (50.01%)
+2025-06-07 00:32:01,803 [INFO] [DexScreener] Fetching MOODENG...
+2025-06-07 00:32:01,972 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
+2025-06-07 00:32:01,973 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
+
+2025-06-07 00:33:11,774 [INFO] 🚀 Starting new hybrid prediction cycle...
+2025-06-07 00:33:12,510 [INFO] [Market] BITCOIN - Price: $105027, Volume: 26415782451
+2025-06-07 00:33:13,500 [INFO] [Alert] BITCOIN Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:33:14,932 [INFO] [Market] ETHEREUM - Price: $2493.88, Volume: 15024212943
+2025-06-07 00:33:15,826 [INFO] [Alert] ETHEREUM Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:33:17,217 [INFO] [Market] RIPPLE - Price: $2.19, Volume: 1581881130
+2025-06-07 00:33:18,612 [INFO] [Alert] RIPPLE Action: BUY 🚀 (98.85%)
+2025-06-07 00:33:19,676 [INFO] [Market] SOLANA - Price: $152.22, Volume: 2871496654
+2025-06-07 00:33:20,459 [INFO] [Alert] SOLANA Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:33:21,388 [INFO] [DexScreener] Fetching MIND (Mind of Pepe)...
+2025-06-07 00:33:21,553 [INFO] [Alert] MIND (Mind of Pepe) Action: HOLD ⏸️ (50.04%)
+2025-06-07 00:33:22,579 [INFO] [DexScreener] Fetching WEPE (Wall Street Pepe)...
+2025-06-07 00:33:22,812 [INFO] [Alert] WEPE (Wall Street Pepe) Action: HOLD ⏸️ (50.01%)
+2025-06-07 00:33:23,888 [INFO] [DexScreener] Fetching MOODENG...
+2025-06-07 00:33:24,041 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
+2025-06-07 00:33:24,042 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
+
+2025-06-07 00:40:33,250 [INFO] 🚀 Starting new hybrid prediction cycle...
+2025-06-07 00:40:33,638 [INFO] [Market] BITCOIN - Price: $105022, Volume: 26293407461
+2025-06-07 00:40:34,494 [INFO] [Alert] BITCOIN Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:40:35,921 [INFO] [Market] ETHEREUM - Price: $2494.26, Volume: 14795479034
+2025-06-07 00:40:36,514 [INFO] [Alert] ETHEREUM Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:40:38,113 [INFO] [Market] RIPPLE - Price: $2.19, Volume: 1579373964
+2025-06-07 00:40:39,020 [INFO] [Alert] RIPPLE Action: BUY 🚀 (98.84%)
+2025-06-07 00:40:40,411 [INFO] [Market] SOLANA - Price: $152.53, Volume: 2879679823
+2025-06-07 00:40:41,230 [INFO] [Alert] SOLANA Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:40:42,452 [INFO] [DexScreener] Fetching MIND (Mind of Pepe)...
+2025-06-07 00:40:42,702 [INFO] [Alert] MIND (Mind of Pepe) Action: HOLD ⏸️ (50.04%)
+2025-06-07 00:40:43,688 [INFO] [DexScreener] Fetching WEPE (Wall Street Pepe)...
+2025-06-07 00:40:43,877 [INFO] [Alert] WEPE (Wall Street Pepe) Action: HOLD ⏸️ (50.01%)
+2025-06-07 00:40:44,817 [INFO] [DexScreener] Fetching MOODENG...
+2025-06-07 00:40:44,985 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
+2025-06-07 00:40:44,986 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
+
+2025-06-07 00:43:23,138 [INFO] 🚀 Starting new hybrid prediction cycle...
+2025-06-07 00:43:23,644 [INFO] [Market] BITCOIN - Price: $105015, Volume: 26267610718
+2025-06-07 00:43:24,467 [INFO] [Alert] BITCOIN Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:43:25,510 [INFO] [Market] ETHEREUM - Price: $2494.81, Volume: 14619623960
+2025-06-07 00:43:26,158 [INFO] [Alert] ETHEREUM Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:43:27,328 [INFO] [Market] RIPPLE - Price: $2.19, Volume: 1576258433
+2025-06-07 00:43:27,771 [INFO] [Alert] RIPPLE Action: BUY 🚀 (98.83%)
+2025-06-07 00:43:28,657 [INFO] [Market] SOLANA - Price: $152.57, Volume: 2875584738
+2025-06-07 00:43:29,128 [INFO] [Alert] SOLANA Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:43:29,967 [INFO] [DexScreener] Fetching MIND (Mind of Pepe)...
+2025-06-07 00:43:30,154 [INFO] [Alert] MIND (Mind of Pepe) Action: HOLD ⏸️ (50.04%)
+2025-06-07 00:43:31,103 [INFO] [DexScreener] Fetching WEPE (Wall Street Pepe)...
+2025-06-07 00:43:31,320 [INFO] [Alert] WEPE (Wall Street Pepe) Action: HOLD ⏸️ (50.01%)
+2025-06-07 00:43:32,268 [INFO] [DexScreener] Fetching MOODENG...
+2025-06-07 00:43:32,437 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
+2025-06-07 00:43:32,438 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
+
+2025-06-07 00:45:34,292 [INFO] 🚀 Starting new hybrid prediction cycle...
+2025-06-07 00:45:34,676 [INFO] [Market] BITCOIN - Price: $105012, Volume: 26257726692
+2025-06-07 00:45:35,514 [INFO] [Alert] BITCOIN Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:45:36,578 [INFO] [Market] ETHEREUM - Price: $2494.15, Volume: 14589028843
+2025-06-07 00:45:37,385 [INFO] [Alert] ETHEREUM Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:45:38,639 [INFO] [Market] RIPPLE - Price: $2.19, Volume: 1576134941
+2025-06-07 00:45:39,634 [INFO] [Alert] RIPPLE Action: BUY 🚀 (98.83%)
+2025-06-07 00:45:40,700 [INFO] [Market] SOLANA - Price: $152.56, Volume: 2875850037
+2025-06-07 00:45:41,494 [INFO] [Alert] SOLANA Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:45:42,533 [INFO] [DexScreener] Fetching MIND (Mind of Pepe)...
+2025-06-07 00:45:42,760 [INFO] [Alert] MIND (Mind of Pepe) Action: HOLD ⏸️ (50.04%)
+2025-06-07 00:45:43,780 [INFO] [DexScreener] Fetching WEPE (Wall Street Pepe)...
+2025-06-07 00:45:44,041 [INFO] [Alert] WEPE (Wall Street Pepe) Action: HOLD ⏸️ (50.01%)
+2025-06-07 00:45:44,989 [INFO] [DexScreener] Fetching MOODENG...
+2025-06-07 00:45:45,151 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
+2025-06-07 00:45:45,153 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
+
+2025-06-07 00:50:34,284 [INFO] 🚀 Starting new hybrid prediction cycle...
+2025-06-07 00:50:34,541 [INFO] [Market] BITCOIN - Price: $104987, Volume: 26295776624
+2025-06-07 00:50:35,251 [INFO] [Alert] BITCOIN Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:50:36,392 [INFO] [Market] ETHEREUM - Price: $2493.47, Volume: 14565343622
+2025-06-07 00:50:36,837 [INFO] [Alert] ETHEREUM Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:50:37,783 [INFO] [Market] RIPPLE - Price: $2.19, Volume: 1569005866
+2025-06-07 00:50:38,250 [INFO] [Alert] RIPPLE Action: BUY 🚀 (98.8%)
+2025-06-07 00:50:39,132 [INFO] [Market] SOLANA - Price: $152.46, Volume: 2887592667
+2025-06-07 00:50:39,585 [INFO] [Alert] SOLANA Action: HOLD ⏸️ (0.0%)
+2025-06-07 00:50:40,547 [INFO] [DexScreener] Fetching MIND (Mind of Pepe)...
+2025-06-07 00:50:40,732 [INFO] [Alert] MIND (Mind of Pepe) Action: HOLD ⏸️ (50.04%)
+2025-06-07 00:50:41,687 [INFO] [DexScreener] Fetching WEPE (Wall Street Pepe)...
+2025-06-07 00:50:41,883 [INFO] [Alert] WEPE (Wall Street Pepe) Action: HOLD ⏸️ (50.01%)
+2025-06-07 00:50:42,768 [INFO] [DexScreener] Fetching MOODENG...
+2025-06-07 00:50:42,965 [ERROR] [DexScreener Error] MOODENG: 'NoneType' object is not subscriptable
+2025-06-07 00:50:42,966 [INFO] ✅ Cycle complete. Sleeping for 1 hour...
+
